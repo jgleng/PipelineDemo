@@ -2,9 +2,19 @@ pipeline {
     agent {label 'win_slave_1'}
 
     stages {
-        stage('Hello') {
+        stage('Build') {
             steps {
-                echo 'Hello World again'
+                echo 'Build'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Test'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploy'
             }
         }
     }
